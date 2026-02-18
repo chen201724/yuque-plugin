@@ -61,7 +61,7 @@ One-click Yuque knowledge base integration for Claude Code.
 # 必需 — 语雀个人访问令牌
 export YUQUE_TOKEN="your-yuque-token"
 
-# 可选 — 自定义 API 地址（默认为 https://www.yuque.com/api/v2）
+# 可选 — 自定义 API 地址（不设置则使用 yuque-mcp 内置默认值 https://www.yuque.com/api/v2）
 export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
 ```
 

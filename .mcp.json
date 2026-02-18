@@ -5,7 +5,7 @@
       "args": ["-y", "yuque-mcp"],
       "env": {
         "YUQUE_TOKEN": "${YUQUE_TOKEN}",
-        "YUQUE_API_URL": "${YUQUE_API_URL:-https://www.yuque.com/api/v2}"
+        "YUQUE_API_URL": "${YUQUE_API_URL}"
       }
     }
   }
