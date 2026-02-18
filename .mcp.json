@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "yuque": {
+      "command": "npx",
+      "args": ["-y", "yuque-mcp"],
+      "env": {
+        "YUQUE_TOKEN": "${YUQUE_TOKEN}",
+        "YUQUE_API_URL": "${YUQUE_API_URL:-https://www.yuque.com/api/v2}"
+      }
+    }
+  }
+}

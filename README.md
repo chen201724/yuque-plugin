@@ -1,0 +1,83 @@
+# 语雀 Claude Code Plugin / Yuque Claude Code Plugin
+
+一键为 Claude Code 集成语雀知识库 AI 能力。
+
+One-click Yuque knowledge base integration for Claude Code.
+
+## ✨ 包含能力 / What's Included
+
+| 类型 | 数量 | 来源 |
+|------|------|------|
+| MCP Tools | 25 | [yuque-mcp](https://github.com/chen201724/yuque-mcp-server) |
+| Agent Skills | 6 | [yuque-skills](https://github.com/chen201724/yuque-skills) |
+| Agent | 1 | yuque-assistant |
+
+### 25 MCP Tools
+
+通过 [yuque-mcp](https://github.com/chen201724/yuque-mcp-server) 提供，覆盖语雀 API 全部核心功能：
+
+- 文档 CRUD（创建、读取、更新、删除）
+- 知识库管理
+- 搜索（全文搜索、知识库内搜索）
+- 团队与协作（成员、权限）
+- 统计与分析
+- 更多...
+
+### 6 Agent Skills
+
+| Skill | 描述 |
+|-------|------|
+| `smart-search` | 自然语言搜索语雀文档，智能摘要回答 |
+| `meeting-notes` | 从会议内容自动生成结构化会议纪要 |
+| `weekly-report` | 汇总一周工作，生成周报并发布到语雀 |
+| `tech-design` | 根据需求生成技术方案文档 |
+| `onboarding-guide` | 为新成员生成入职指南 |
+| `knowledge-report` | 分析团队知识库健康度，生成月报 |
+
+### Agent
+
+`yuque-assistant` — 语雀知识库专业助手，擅长文档管理、知识搜索、内容创作和团队协作。
+
+## 📦 安装 / Installation
+
+在 Claude Code 中运行：
+
+```
+/plugin install chen201724/yuque-plugin
+```
+
+或通过 Marketplace：
+
+```
+/plugin marketplace add chen201724/yuque-ecosystem
+/plugin install yuque
+```
+
+## ⚙️ 配置 / Configuration
+
+安装后需要设置语雀 Token 环境变量：
+
+```bash
+# 必需 — 语雀个人访问令牌
+export YUQUE_TOKEN="your-yuque-token"
+
+# 可选 — 自定义 API 地址（默认为 https://www.yuque.com/api/v2）
+export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
+```
+
+### 获取 Token / Get Your Token
+
+1. 登录 [语雀](https://www.yuque.com)
+2. 进入 **个人设置** → **Token** → **新建**
+3. 勾选需要的权限（建议全选读写权限）
+4. 复制生成的 Token
+
+## 🔗 相关项目 / Related Projects
+
+- [yuque-mcp-server](https://github.com/chen201724/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
+- [yuque-skills](https://github.com/chen201724/yuque-skills) — 语雀 Agent Skills（6 Skills）
+- [yuque-ecosystem](https://github.com/chen201724/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
+
+## 📄 License
+
+MIT
