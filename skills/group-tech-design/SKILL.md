@@ -1,21 +1,21 @@
 ---
 name: group-tech-design
-description: Generate technical design documents using a standard template and save them to a group Yuque knowledge base. For group use — stores designs in group repos with review workflow. Requires team Token.
+description: Generate technical design documents using a standard template and save them to a group Yuque knowledge base. For group use — stores designs in group repos with review workflow. Requires group Token.
 license: Apache-2.0
-compatibility: Requires yuque-mcp server connected to a Yuque account with team Token (group-level access)
+compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
 metadata:
   author: chen201724
   version: "2.0"
 ---
 
-# Group Tech Design — Technical Design Document Generator (Team)
+# Team Tech Design — Technical Design Document Generator (Team)
 
-Help the user write a structured technical design document following a standard template, then save it to the group's Yuque knowledge base for group review.
+Help the user write a structured technical design document following a standard template, then save it to the team's Yuque knowledge base for group review.
 
 ## When to Use
 
 - User wants to write a technical design document or RFC and save it to the group repo
-- User says "帮我写技术方案到团队库", "write a tech design for the group", "团队技术方案"
+- User says "帮我写技术方案到团队库", "write a tech design for the team", "团队技术方案"
 - User describes a feature/system and needs it formalized into a design doc for group review
 
 ## Required MCP Tools
@@ -93,7 +93,7 @@ Present the draft to the user before saving. Ask:
 - "方案内容是否准确？有需要调整的地方吗？"
 - "要补充其他技术细节吗？"
 
-### Step 5: Save to Group Yuque
+### Step 5: Save to Team Yuque
 
 ```
 Tool: yuque_list_repos
@@ -151,5 +151,5 @@ Parameters:
 | `yuque_create_doc` fails | Show error, offer to output the markdown for manual copy |
 | User wants to update an existing design doc | Use `yuque_search` to find it, then suggest creating a v2 or appendix |
 | User wants to save to personal repo | Suggest using `personal-tech-design` skill instead |
-| Group login not provided | Ask user for the group's group login |
+| Group login not provided | Ask user for the team's group login |
 | Team Token not configured | Inform user that group repos require a team-level Token |
