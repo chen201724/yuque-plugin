@@ -40,17 +40,32 @@ One-click Yuque knowledge base integration for Claude Code.
 
 ## 📦 安装 / Installation
 
-在 Claude Code 中运行：
+### 方式一：通过 Marketplace 安装（推荐）
 
-```
-/plugin install yuque/yuque-plugin
-```
-
-或通过 Marketplace：
+1. 添加语雀 Marketplace：
 
 ```
 /plugin marketplace add yuque/yuque-ecosystem
-/plugin install yuque
+```
+
+2. 安装插件：
+
+```
+/plugin install yuque@yuque-ecosystem
+```
+
+### 方式二：通过 GitHub 仓库直接安装
+
+1. Clone 仓库到本地：
+
+```bash
+git clone git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
+```
+
+2. 从本地目录安装：
+
+```bash
+claude plugin install --dir /path/to/yuque-plugin
 ```
 
 ## ⚙️ 配置 / Configuration
