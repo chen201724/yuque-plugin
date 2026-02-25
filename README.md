@@ -52,20 +52,20 @@ Skills 来自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库，直
 
 ```bash
 # 1. 添加语雀 Marketplace
-claude plugin marketplace add yuque/yuque-ecosystem
+claude plugin marketplace add yuque/yuque-plugin
 
 # 2. 安装 Plugin
-claude plugin install yuque@yuque-ecosystem
+claude plugin install yuque@yuque
 ```
 
 ### 方式二：在 Claude Code 内部安装
 
 ```
 # 1. 添加语雀 Marketplace
-/plugin marketplace add yuque/yuque-ecosystem
+/plugin marketplace add yuque/yuque-plugin
 
 # 2. 安装 Plugin
-/plugin install yuque@yuque-ecosystem
+/plugin install yuque@yuque
 ```
 
 ### 方式三：通过 GitHub 仓库直接安装
@@ -90,10 +90,10 @@ claude plugin install --dir /path/to/yuque-plugin
 
 ```bash
 # 在终端中更新
-claude plugin update yuque@yuque-ecosystem
+claude plugin update yuque@yuque
 
 # 或在 Claude Code 内部
-/plugin marketplace update yuque-ecosystem
+/plugin update yuque@yuque
 ```
 
 ### 更新 MCP Server
