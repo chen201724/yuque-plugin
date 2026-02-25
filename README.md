@@ -9,7 +9,7 @@ One-click Yuque knowledge base integration for Claude Code.
 | 类型 | 数量 | 来源 |
 |------|------|------|
 | MCP Tools | 25 | [yuque-mcp](https://github.com/yuque/yuque-mcp-server) |
-| Agent Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills)（git submodule） |
+| Agent Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills) |
 | Agent | 1 | yuque-assistant |
 
 ### 25 MCP Tools
@@ -25,7 +25,7 @@ One-click Yuque knowledge base integration for Claude Code.
 
 ### 10 Agent Skills
 
-Skills 通过 git submodule 引用自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库。
+Skills 来自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库，直接内置在本插件中。
 
 #### 👤 个人 Skills（4）
 
@@ -69,17 +69,10 @@ Skills 通过 git submodule 引用自 [yuque-skills](https://github.com/yuque/yu
 
 ### 方式二：通过 GitHub 仓库直接安装
 
-1. Clone 仓库到本地（注意使用 `--recursive` 拉取 submodule）：
+1. Clone 仓库到本地：
 
 ```bash
-git clone --recursive git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
-```
-
-如果已经 clone 过，补充拉取 submodule：
-
-```bash
-cd /path/to/yuque-plugin
-git submodule update --init --recursive
+git clone git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
 ```
 
 2. 从本地目录安装：
