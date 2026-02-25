@@ -1,7 +1,7 @@
 {
   "name": "yuque",
-  "description": "语雀知识库 AI 集成 — 25 MCP Tools + 6 Skills + 专业 Agent",
-  "version": "1.0.0",
+  "description": "语雀知识库 AI 集成 — 25 MCP Tools + 10 Skills + 专业 Agent",
+  "version": "1.1.0",
   "author": {
     "name": "yuque"
   },
