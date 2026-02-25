@@ -4,7 +4,7 @@ description: Generate comprehensive monthly knowledge management reports by anal
 license: Apache-2.0
 compatibility: Requires yuque-mcp server. Yuque API Token must have `statistic:read` permission for group stats.
 metadata:
-  author: chen201724
+  author: yuque
   version: "1.0"
 ---
 

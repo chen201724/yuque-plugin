@@ -4,7 +4,7 @@ description: Generate team weekly reports from Yuque activity data including doc
 license: Apache-2.0
 compatibility: Requires yuque-mcp server. Yuque API Token must have `statistic:read` permission for group stats.
 metadata:
-  author: chen201724
+  author: yuque
   version: "1.0"
 ---
 
