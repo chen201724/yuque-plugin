@@ -1,5 +1,5 @@
 ---
-name: personal-meeting-notes
+name: meeting-notes
 description: Format meeting content into structured meeting notes and archive them to your personal Yuque knowledge base. For personal/individual use — saves to your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Personal Meeting Notes — Format and Archive to Personal Yuque
+# Meeting Notes — Format and Archive to Personal Yuque
 
 Take raw meeting information from the user, format it into a standard meeting notes template, and create a document in the user's personal Yuque knowledge base.
 
@@ -175,7 +175,7 @@ After creation, respond with:
 - Keep the document well-structured; prefer tables for action items
 - If the user provides audio transcription, clean up filler words and organize by topic
 - Preserve the user's original wording for decisions and action items — don't paraphrase important commitments
-- This skill saves to personal repos — for team repos, use `team-meeting-notes`
+- This skill saves to personal repos — for team repos, use the `meeting-notes` skill in the `yuque-group` plugin
 
 ## Error Handling
 
@@ -186,4 +186,3 @@ After creation, respond with:
 | `yuque_create_doc` fails (403) | Tell user they may lack write permission to this repo |
 | `yuque_create_doc` fails (other) | Show error, suggest user check yuque-mcp connection |
 | No clear action items | Still create the doc, note "本次会议无明确待办事项" |
-| User wants to save to team repo | Suggest using `team-meeting-notes` skill instead |

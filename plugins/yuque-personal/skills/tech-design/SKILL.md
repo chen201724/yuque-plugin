@@ -1,5 +1,5 @@
 ---
-name: personal-tech-design
+name: tech-design
 description: Generate technical design documents using a standard template and save them to your personal Yuque knowledge base. For personal/individual use — stores designs in your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Personal Tech Design — Technical Design Document Generator (Personal)
+# Tech Design — Technical Design Document Generator (Personal)
 
 Help the user write a structured technical design document following a standard template, then save it to their personal Yuque knowledge base.
 
@@ -135,7 +135,7 @@ Parameters:
 - Keep the document actionable — someone should be able to implement from this doc
 - If the user's requirements are vague, make reasonable assumptions and note them clearly with "【假设】" markers
 - Don't over-engineer — match the design complexity to the project scope
-- This skill saves to personal repos — for team repos, use `team-tech-design`
+- This skill saves to personal repos — for team repos, use the `tech-design` skill in the `yuque-group` plugin
 
 ## Error Handling
 
@@ -145,4 +145,3 @@ Parameters:
 | `yuque_search` finds conflicting existing designs | Mention them and ask user how to reconcile |
 | `yuque_create_doc` fails | Show error, offer to output the markdown for manual copy |
 | User wants to update an existing design doc | Use `yuque_search` to find it, then suggest creating a v2 or appendix |
-| User wants to save to team repo | Suggest using `team-tech-design` skill instead |
