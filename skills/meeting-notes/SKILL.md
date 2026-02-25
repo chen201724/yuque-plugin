@@ -128,19 +128,31 @@ Use this template:
 
 ### Step 4: Confirm Target Repository
 
-Ask the user which Yuque knowledge base to save to, or use `yuque_list_repos` to find it:
+Ask the user which Yuque knowledge base to save to, or use `yuque_list_repos` to find it.
+
+**Default to personal repos. Do NOT proactively ask for a team identifier!**
 
 ```
 Tool: yuque_list_repos
 Parameters:
-  login: "<group_login>"    # team/group login, if known
-  type: "group"    # or "user" for personal repos
+  login: "<user_login>"
+  type: "user"    # default to personal repos
+```
+
+If the user explicitly specifies a team/group knowledge base:
+
+```
+Tool: yuque_list_repos
+Parameters:
+  login: "<group_login>"
+  type: "group"
 ```
 
 If the user hasn't specified a repo:
-1. List available repos and ask the user to pick one
+1. List available personal repos and ask the user to pick one
 2. If there's an obvious "会议纪要" or "Meeting Notes" repo, suggest it
 3. If the user says "就放那个会议的库", match by name
+4. Only use group repos when the user explicitly mentions a team name
 
 ### Step 5: Create the Document
 
@@ -182,7 +194,7 @@ After creation, respond with:
 | Situation | Action |
 |-----------|--------|
 | User provides very little info | Ask for at least: topic, attendees, key decisions |
-| `yuque_list_repos` returns empty | Ask user for the exact repo name or ID |
+| `yuque_list_repos` returns empty | Try personal repos first (`type: "user"`), then ask user for the exact repo name or ID |
 | `yuque_create_doc` fails (403) | Tell user they may lack write permission to this repo |
 | `yuque_create_doc` fails (other) | Show error, suggest user check yuque-mcp connection |
 | No clear action items | Still create the doc, note "本次会议无明确待办事项" |

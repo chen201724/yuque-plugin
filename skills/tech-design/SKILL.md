@@ -92,11 +92,22 @@ Present the draft to the user before saving. Ask:
 
 ### Step 5: Save to Yuque
 
+**Default to personal repos. Do NOT proactively ask for a team identifier!**
+
+```
+Tool: yuque_list_repos
+Parameters:
+  login: "<user_login>"
+  type: "user"    # default to personal repos
+```
+
+If the user explicitly specifies a team/group knowledge base:
+
 ```
 Tool: yuque_list_repos
 Parameters:
   login: "<group_login>"
-  type: "group"    # or "user" for personal repos
+  type: "group"
 ```
 
 Find or ask for the target repo (often "技术方案" or "设计文档" or "RFC").
@@ -146,6 +157,7 @@ Parameters:
 | `yuque_search` finds conflicting existing designs | Mention them and ask user how to reconcile |
 | `yuque_create_doc` fails | Show error, offer to output the markdown for manual copy |
 | User wants to update an existing design doc | Use `yuque_search` to find it, then suggest creating a v2 or appendix |
+| User doesn't specify a team | Default to personal repos (`type: "user"`), do NOT ask for team identifier |
 
 ## Example
 
