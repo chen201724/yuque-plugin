@@ -1,6 +1,6 @@
 ---
-name: team-tech-design
-description: Generate technical design documents using a standard template and save them to a team Yuque knowledge base. For team use — stores designs in team repos with review workflow. Requires team Token.
+name: group-tech-design
+description: Generate technical design documents using a standard template and save them to a group Yuque knowledge base. For group use — stores designs in group repos with review workflow. Requires team Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with team Token (group-level access)
 metadata:
@@ -8,22 +8,22 @@ metadata:
   version: "2.0"
 ---
 
-# Team Tech Design — Technical Design Document Generator (Team)
+# Group Tech Design — Technical Design Document Generator (Team)
 
-Help the user write a structured technical design document following a standard template, then save it to the team's Yuque knowledge base for team review.
+Help the user write a structured technical design document following a standard template, then save it to the group's Yuque knowledge base for group review.
 
 ## When to Use
 
-- User wants to write a technical design document or RFC and save it to the team repo
-- User says "帮我写技术方案到团队库", "write a tech design for the team", "团队技术方案"
-- User describes a feature/system and needs it formalized into a design doc for team review
+- User wants to write a technical design document or RFC and save it to the group repo
+- User says "帮我写技术方案到团队库", "write a tech design for the group", "团队技术方案"
+- User describes a feature/system and needs it formalized into a design doc for group review
 
 ## Required MCP Tools
 
 All tools are from the `yuque-mcp` server:
 
 - `yuque_search` — (Optional) Search for related existing docs for context
-- `yuque_list_repos` — Find the target team knowledge base
+- `yuque_list_repos` — Find the target group knowledge base
 - `yuque_create_doc` — Create the design document
 
 ## Reference
@@ -93,7 +93,7 @@ Present the draft to the user before saving. Ask:
 - "方案内容是否准确？有需要调整的地方吗？"
 - "要补充其他技术细节吗？"
 
-### Step 5: Save to Team Yuque
+### Step 5: Save to Group Yuque
 
 ```
 Tool: yuque_list_repos
@@ -102,7 +102,7 @@ Parameters:
   type: "group"
 ```
 
-Find or ask for the target team repo (often "技术方案" or "设计文档" or "RFC").
+Find or ask for the target group repo (often "技术方案" or "设计文档" or "RFC").
 
 ```
 Tool: yuque_create_doc
@@ -139,8 +139,8 @@ Parameters:
 - Keep the document actionable — someone should be able to implement from this doc
 - If the user's requirements are vague, make reasonable assumptions and note them clearly with "【假设】" markers
 - Don't over-engineer — match the design complexity to the project scope
-- Always end the confirmation with "请团队评审后发布" — team designs need review
-- This skill saves to team repos — for personal repos, use `personal-tech-design`
+- Always end the confirmation with "请团队评审后发布" — group designs need review
+- This skill saves to group repos — for personal repos, use `personal-tech-design`
 
 ## Error Handling
 
@@ -151,5 +151,5 @@ Parameters:
 | `yuque_create_doc` fails | Show error, offer to output the markdown for manual copy |
 | User wants to update an existing design doc | Use `yuque_search` to find it, then suggest creating a v2 or appendix |
 | User wants to save to personal repo | Suggest using `personal-tech-design` skill instead |
-| Group login not provided | Ask user for the team's group login |
-| Team Token not configured | Inform user that team repos require a team-level Token |
+| Group login not provided | Ask user for the group's group login |
+| Team Token not configured | Inform user that group repos require a team-level Token |

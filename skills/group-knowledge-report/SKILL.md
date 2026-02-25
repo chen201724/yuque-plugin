@@ -1,22 +1,22 @@
 ---
-name: team-knowledge-report
-description: Generate comprehensive monthly knowledge management reports by analyzing team Yuque activity data including group stats, member contributions, knowledge base health, and document trends. For team use — requires team Token with statistic:read permission.
+name: group-knowledge-report
+description: Generate comprehensive monthly knowledge management reports by analyzing group Yuque activity data including group stats, member contributions, knowledge base health, and document trends. For group use — requires team Token with statistic:read permission.
 license: Apache-2.0
-compatibility: Requires yuque-mcp server. Yuque API Token must be a team Token with `statistic:read` permission for group stats.
+compatibility: Requires yuque-mcp server. Yuque API Token must be a group Token with `statistic:read` permission for group stats.
 metadata:
   author: chen201724
   version: "2.0"
 ---
 
-# Team Knowledge Report — Team Knowledge Management Monthly Report
+# Group Knowledge Report — Team Knowledge Management Monthly Report
 
-Collect comprehensive team data from Yuque (group stats, member contributions, knowledge base metrics, document activity) and generate a detailed monthly knowledge management report.
+Collect comprehensive group data from Yuque (group stats, member contributions, knowledge base metrics, document activity) and generate a detailed monthly knowledge management report.
 
 ## When to Use
 
 - User wants a monthly knowledge management report
 - User says "生成知识月报", "knowledge report", "团队知识管理月报"
-- Monthly review of team documentation health and activity
+- Monthly review of group documentation health and activity
 
 ## Required MCP Tools
 
@@ -30,7 +30,7 @@ All tools are from the `yuque-mcp` server:
 
 ## Workflow
 
-### Step 1: Identify the Team and Period
+### Step 1: Identify the Group and Period
 
 Gather from the user:
 - **Group login** (required)
