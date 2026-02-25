@@ -1,20 +1,20 @@
 ---
 name: group-meeting-notes
-description: Format meeting content into structured meeting notes and archive them to a group Yuque knowledge base. For group use — saves to group repos. Requires team Token.
+description: Format meeting content into structured meeting notes and archive them to a group Yuque knowledge base. For group use — saves to team/group repos. Requires group Token.
 license: Apache-2.0
-compatibility: Requires yuque-mcp server connected to a Yuque account with team Token (group-level access)
+compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
 metadata:
   author: chen201724
   version: "2.0"
 ---
 
-# Group Meeting Notes — Format and Archive to Team Yuque
+# Team Meeting Notes — Format and Archive to Team Yuque
 
-Take raw meeting information from the user, format it into a standard meeting notes template, and create a document in the group's Yuque knowledge base.
+Take raw meeting information from the user, format it into a standard meeting notes template, and create a document in the team's Yuque knowledge base.
 
 ## When to Use
 
-- User shares meeting content and wants it saved to the group's Yuque
+- User shares meeting content and wants it saved to the team's Yuque
 - User says "帮我整理会议纪要到团队库", "save meeting notes to group repo", "把会议记录存到团队知识库"
 - User pastes unstructured meeting notes and wants them formatted and saved to group repo
 
@@ -129,9 +129,9 @@ Use this template:
 > 本纪要由 AI 助手整理，如有遗漏请补充。
 ```
 
-### Step 4: Find Group Repository
+### Step 4: Find Team Repository
 
-List the group's knowledge bases:
+List the team's knowledge bases:
 
 ```
 Tool: yuque_list_repos
@@ -186,10 +186,10 @@ After creation, respond with:
 | Situation | Action |
 |-----------|--------|
 | User provides very little info | Ask for at least: topic, attendees, key decisions |
-| `yuque_list_repos` returns empty | Ask user to verify group login and team Token |
-| `yuque_create_doc` fails (403) | Tell user they may lack write permission; check team Token scope |
+| `yuque_list_repos` returns empty | Ask user to verify group login and group Token |
+| `yuque_create_doc` fails (403) | Tell user they may lack write permission; check group Token scope |
 | `yuque_create_doc` fails (other) | Show error, suggest user check yuque-mcp connection |
 | No clear action items | Still create the doc, note "本次会议无明确待办事项" |
 | User wants to save to personal repo | Suggest using `personal-meeting-notes` skill instead |
-| Group login not provided | Ask user for the group's group login |
+| Group login not provided | Ask user for the team's group login |
 | Team Token not configured | Inform user that group repos require a team-level Token |

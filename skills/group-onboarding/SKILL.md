@@ -1,16 +1,16 @@
 ---
 name: group-onboarding
-description: Automatically compile a group's core Yuque documents into a structured onboarding reading guide for new group members. For group use — scans group knowledge bases and generates a prioritized reading plan. Requires team Token.
+description: Automatically compile a team's core Yuque documents into a structured onboarding reading guide for new group members. For group use — scans group knowledge bases and generates a prioritized reading plan. Requires group Token.
 license: Apache-2.0
-compatibility: Requires yuque-mcp server connected to a Yuque account with team Token (group-level access)
+compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
 metadata:
   author: chen201724
   version: "2.0"
 ---
 
-# Group Onboarding — New Member Reading Guide Generator
+# Team Onboarding — New Member Reading Guide Generator
 
-Scan a group's Yuque knowledge bases, identify core documents, and generate a structured onboarding reading guide organized by week and priority.
+Scan a team's Yuque knowledge bases, identify core documents, and generate a structured onboarding reading guide organized by week and priority.
 
 ## When to Use
 
@@ -22,7 +22,7 @@ Scan a group's Yuque knowledge bases, identify core documents, and generate a st
 
 All tools are from the `yuque-mcp` server:
 
-- `yuque_list_repos` — List all knowledge bases in the group
+- `yuque_list_repos` — List all knowledge bases in the team
 - `yuque_get_toc` — Get the table of contents for each knowledge base
 - `yuque_get_doc` — (Optional) Read specific docs for summary
 - `yuque_group_members` — Get group member list (for mentor assignment)
@@ -30,7 +30,7 @@ All tools are from the `yuque-mcp` server:
 
 ## Workflow
 
-### Step 1: Identify the Group and Context
+### Step 1: Identify the Team and Context
 
 Gather from the user:
 
@@ -249,11 +249,11 @@ Parameters:
 
 | Situation | Action |
 |-----------|--------|
-| `yuque_list_repos` returns empty | Ask user to verify group login and team Token |
+| `yuque_list_repos` returns empty | Ask user to verify group login and group Token |
 | `yuque_get_toc` fails for a repo | Skip that repo, note it in the guide |
 | `yuque_group_members` fails | Skip mentor suggestion, still generate the guide |
 | Team has very few docs (<10) | Create a simpler guide, suggest the group build more docs |
 | Team has many docs (>100) | Be more selective, focus on top 20-30 most important |
 | No docs match the specified role | Fall back to general guide, note role-specific docs are missing |
-| Group login not provided | Ask user for the group's group login |
-| Team Token not configured | Inform user that team features require a team-level Token |
+| Group login not provided | Ask user for the team's group login |
+| Team Token not configured | Inform user that group features require a team-level Token |

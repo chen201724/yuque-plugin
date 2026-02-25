@@ -1,20 +1,20 @@
 ---
 name: group-search
-description: Search group Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For group use — searches within group repositories. Requires team Token.
+description: Search group Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For group use — searches within team/group repositories. Requires group Token.
 license: Apache-2.0
-compatibility: Requires yuque-mcp server connected to a Yuque account with team Token (group-level access)
+compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
 metadata:
   author: chen201724
   version: "2.0"
 ---
 
-# Group Search — Yuque Team Knowledge Base Search & Q&A
+# Team Search — Yuque Team Knowledge Base Search & Q&A
 
-Search across group Yuque knowledge bases using natural language, read relevant documents, and synthesize a clear answer with references. Scoped to group repositories.
+Search across group Yuque knowledge bases using natural language, read relevant documents, and synthesize a clear answer with references. Scoped to team/group repositories.
 
 ## When to Use
 
-- User asks a question that might be answered by their group's Yuque docs
+- User asks a question that might be answered by their team's Yuque docs
 - User wants to find specific information in group knowledge bases
 - User says "搜一下团队文档", "search group Yuque", "团队知识库里有没有..."
 
@@ -28,7 +28,7 @@ All tools are from the `yuque-mcp` server:
 
 ## Workflow
 
-### Step 1: Identify Group Scope
+### Step 1: Identify Team Scope
 
 First, get the list of group knowledge bases to understand the search scope:
 
@@ -73,7 +73,7 @@ From the search results, select the top 3-5 most relevant documents based on:
 - Document update time (prefer recent)
 - Repository context (prioritize results from group repos identified in Step 1)
 
-Filter out results that don't belong to the group's knowledge bases.
+Filter out results that don't belong to the team's knowledge bases.
 
 ### Step 5: Read Document Content
 
@@ -130,10 +130,10 @@ Compose the answer in the following format:
 
 | Situation | Action |
 |-----------|--------|
-| `yuque_list_repos` fails | Check if group login is correct and team Token is configured |
+| `yuque_list_repos` fails | Check if group login is correct and group Token is configured |
 | `yuque_search` returns empty | Try alternative keywords, then inform user |
 | `yuque_get_doc` fails (404) | Skip this doc, note it may have been deleted |
-| `yuque_get_doc` fails (403) | Tell user they may lack permission; check team Token scope |
+| `yuque_get_doc` fails (403) | Tell user they may lack permission; check group Token scope |
 | API timeout | Retry once, then inform user of connectivity issue |
 | Too many results | Focus on top 3 by relevance, mention there are more results available |
 | User wants to search personal docs | Suggest using `personal-search` skill instead |
