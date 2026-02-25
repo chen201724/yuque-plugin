@@ -42,7 +42,7 @@ Skills 通过 git submodule 引用自 [yuque-skills](https://github.com/yuque/yu
 |-------|------|
 | `onboarding-guide` | 为新成员生成入职指南 |
 | `knowledge-report` | 分析团队知识库健康度，生成月报 |
-| `team-wiki-init` | 一键初始化团队知识库结构 |
+| `group-wiki-init` | 一键初始化团队知识库结构 |
 | `doc-review` | 文档质量审查与改进建议 |
 | `permission-audit` | 知识库权限审计与安全报告 |
 | `content-migration` | 从其他平台迁移内容到语雀 |
