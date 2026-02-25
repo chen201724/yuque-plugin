@@ -1,6 +1,6 @@
 ---
 name: onboarding-guide
-description: Automatically compile a team's core Yuque documents into a structured onboarding reading guide for new team members. Use when a new person joins the team and needs a curated reading list organized by priority and week.
+description: "⚠️ Requires Group Access Token. Automatically compile a team's core Yuque documents into a structured onboarding reading guide for new team members. Use when a new person joins the team and needs a curated reading list organized by priority and week. Note: Personal tokens cannot access team member and repo information needed for this skill."
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with team/group access
 metadata:
@@ -9,6 +9,9 @@ metadata:
 ---
 
 # Onboarding Guide — New Member Reading Guide Generator
+
+> ⚠️ **此 Skill 需要团队 Token（Group Access Token）**
+> 个人 Token 无法获取团队成员信息和团队知识库列表，使用前请确保已配置团队级别的 API Token。
 
 Scan a team's Yuque knowledge bases, identify core documents, and generate a structured onboarding reading guide organized by week and priority.
 
