@@ -68,6 +68,43 @@ git clone git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
 claude plugin install --dir /path/to/yuque-plugin
 ```
 
+## 🔄 更新 / Upgrade
+
+### 更新 Plugin（Skills & Agent）
+
+当我们发布新版本的 Skills 或 Agent 时，你可以通过以下方式更新：
+
+1. 更新 Marketplace 目录：
+   ```
+   /plugin marketplace update
+   ```
+
+2. 重新安装 Plugin 以获取最新版本：
+   ```
+   /plugin install yuque@yuque-ecosystem
+   ```
+
+### 更新 MCP Server
+
+MCP Server（yuque-mcp）通过 `npx -y yuque-mcp` 运行，每次启动时会自动检查并使用最新版本，无需手动更新。
+
+如果需要指定版本：
+```json
+{
+  "mcpServers": {
+    "yuque": {
+      "command": "npx",
+      "args": ["-y", "yuque-mcp@1.0.0"]
+    }
+  }
+}
+```
+
+### 查看版本
+
+- Plugin 版本：查看 `/plugin` 界面的 Installed tab
+- MCP Server 版本：`npx yuque-mcp --version`
+
 ## ⚙️ 配置 / Configuration
 
 安装后需要设置语雀 Token 环境变量：
