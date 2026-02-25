@@ -9,7 +9,7 @@ One-click Yuque knowledge base integration for Claude Code.
 | 类型 | 数量 | 来源 |
 |------|------|------|
 | MCP Tools | 25 | [yuque-mcp](https://github.com/yuque/yuque-mcp-server) |
-| Agent Skills | 6 | [yuque-skills](https://github.com/yuque/yuque-skills) |
+| Agent Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills)（git submodule） |
 | Agent | 1 | yuque-assistant |
 
 ### 25 MCP Tools
@@ -23,7 +23,11 @@ One-click Yuque knowledge base integration for Claude Code.
 - 统计与分析
 - 更多...
 
-### 6 Agent Skills
+### 10 Agent Skills
+
+Skills 通过 git submodule 引用自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库。
+
+#### 👤 个人 Skills（4）
 
 | Skill | 描述 |
 |-------|------|
@@ -31,8 +35,17 @@ One-click Yuque knowledge base integration for Claude Code.
 | `meeting-notes` | 从会议内容自动生成结构化会议纪要 |
 | `weekly-report` | 汇总一周工作，生成周报并发布到语雀 |
 | `tech-design` | 根据需求生成技术方案文档 |
+
+#### 👥 团队 Skills（6）
+
+| Skill | 描述 |
+|-------|------|
 | `onboarding-guide` | 为新成员生成入职指南 |
 | `knowledge-report` | 分析团队知识库健康度，生成月报 |
+| `team-wiki-init` | 一键初始化团队知识库结构 |
+| `doc-review` | 文档质量审查与改进建议 |
+| `permission-audit` | 知识库权限审计与安全报告 |
+| `content-migration` | 从其他平台迁移内容到语雀 |
 
 ### Agent
 
@@ -56,10 +69,17 @@ One-click Yuque knowledge base integration for Claude Code.
 
 ### 方式二：通过 GitHub 仓库直接安装
 
-1. Clone 仓库到本地：
+1. Clone 仓库到本地（注意使用 `--recursive` 拉取 submodule）：
 
 ```bash
-git clone git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
+git clone --recursive git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
+```
+
+如果已经 clone 过，补充拉取 submodule：
+
+```bash
+cd /path/to/yuque-plugin
+git submodule update --init --recursive
 ```
 
 2. 从本地目录安装：
@@ -90,7 +110,7 @@ export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
 ## 🔗 相关项目 / Related Projects
 
 - [yuque-mcp-server](https://github.com/yuque/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
-- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Agent Skills（6 Skills）
+- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Agent Skills（10 Skills）
 - [yuque-ecosystem](https://github.com/yuque/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
 
 ## 📄 License
