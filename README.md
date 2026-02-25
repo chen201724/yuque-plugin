@@ -9,8 +9,7 @@ One-click Yuque knowledge base integration for Claude Code.
 | 类型 | 数量 | 来源 |
 |------|------|------|
 | MCP Tools | 25 | [yuque-mcp](https://github.com/yuque/yuque-mcp-server) |
-| Agent Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills) |
-| Agent | 1 | yuque-assistant |
+| Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills) |
 
 ### 25 MCP Tools
 
@@ -23,7 +22,7 @@ One-click Yuque knowledge base integration for Claude Code.
 - 统计与分析
 - 更多...
 
-### 10 Agent Skills
+### 10 Skills
 
 Skills 来自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库，直接内置在本插件中。
 
@@ -46,10 +45,6 @@ Skills 来自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库，直
 | `doc-review` | 文档质量审查与改进建议 |
 | `permission-audit` | 知识库权限审计与安全报告 |
 | `content-migration` | 从其他平台迁移内容到语雀 |
-
-### Agent
-
-`yuque-assistant` — 语雀知识库专业助手，擅长文档管理、知识搜索、内容创作和团队协作。
 
 ## 📦 安装 / Installation
 
@@ -83,9 +78,9 @@ claude plugin install --dir /path/to/yuque-plugin
 
 ## 🔄 更新 / Upgrade
 
-### 更新 Plugin（Skills & Agent）
+### 更新 Plugin（Skills）
 
-当我们发布新版本的 Skills 或 Agent 时，你可以通过以下方式更新：
+当我们发布新版本的 Skills 时，你可以通过以下方式更新：
 
 1. 更新 Marketplace 目录：
    ```
@@ -140,7 +135,7 @@ export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
 ## 🔗 相关项目 / Related Projects
 
 - [yuque-mcp-server](https://github.com/yuque/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
-- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Agent Skills（10 Skills）
+- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Skills（10 Skills）
 - [yuque-ecosystem](https://github.com/yuque/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
 
 ## 📄 License
