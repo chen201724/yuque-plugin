@@ -4,7 +4,7 @@ description: Automatically compile a team's core Yuque documents into a structur
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with team/group access
 metadata:
-  author: chen201724
+  author: yuque
   version: "1.0"
 ---
 

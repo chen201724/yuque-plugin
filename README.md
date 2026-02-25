@@ -8,13 +8,13 @@ One-click Yuque knowledge base integration for Claude Code.
 
 | 类型 | 数量 | 来源 |
 |------|------|------|
-| MCP Tools | 25 | [yuque-mcp](https://github.com/chen201724/yuque-mcp-server) |
-| Agent Skills | 6 | [yuque-skills](https://github.com/chen201724/yuque-skills) |
+| MCP Tools | 25 | [yuque-mcp](https://github.com/yuque/yuque-mcp-server) |
+| Agent Skills | 6 | [yuque-skills](https://github.com/yuque/yuque-skills) |
 | Agent | 1 | yuque-assistant |
 
 ### 25 MCP Tools
 
-通过 [yuque-mcp](https://github.com/chen201724/yuque-mcp-server) 提供，覆盖语雀 API 全部核心功能：
+通过 [yuque-mcp](https://github.com/yuque/yuque-mcp-server) 提供，覆盖语雀 API 全部核心功能：
 
 - 文档 CRUD（创建、读取、更新、删除）
 - 知识库管理
@@ -43,13 +43,13 @@ One-click Yuque knowledge base integration for Claude Code.
 在 Claude Code 中运行：
 
 ```
-/plugin install chen201724/yuque-plugin
+/plugin install yuque/yuque-plugin
 ```
 
 或通过 Marketplace：
 
 ```
-/plugin marketplace add chen201724/yuque-ecosystem
+/plugin marketplace add yuque/yuque-ecosystem
 /plugin install yuque
 ```
 
@@ -74,9 +74,9 @@ export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
 
 ## 🔗 相关项目 / Related Projects
 
-- [yuque-mcp-server](https://github.com/chen201724/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
-- [yuque-skills](https://github.com/chen201724/yuque-skills) — 语雀 Agent Skills（6 Skills）
-- [yuque-ecosystem](https://github.com/chen201724/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
+- [yuque-mcp-server](https://github.com/yuque/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
+- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Agent Skills（6 Skills）
+- [yuque-ecosystem](https://github.com/yuque/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
 
 ## 📄 License
 
