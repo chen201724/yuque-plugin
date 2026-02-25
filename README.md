@@ -74,15 +74,22 @@ claude plugin install --dir /path/to/yuque-plugin
 
 当我们发布新版本的 Skills 或 Agent 时，你可以通过以下方式更新：
 
-1. 更新 Marketplace 目录：
-   ```
-   /plugin marketplace update
-   ```
+**方式一：手动更新**
 
-2. 重新安装 Plugin 以获取最新版本：
-   ```
-   /plugin install yuque@yuque-ecosystem
-   ```
+```
+/plugin marketplace update yuque-ecosystem
+```
+
+这会刷新 marketplace 数据并更新已安装的 plugin 到最新版本。
+
+**方式二：开启自动更新（推荐）**
+
+1. 运行 `/plugin`
+2. 选择 **Marketplaces** tab
+3. 选择 **yuque-ecosystem**
+4. 选择 **Enable auto-update**
+
+开启后，每次启动 Claude Code 时会自动检查并更新。
 
 ### 更新 MCP Server
 
