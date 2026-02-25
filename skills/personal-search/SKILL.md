@@ -119,3 +119,4 @@ Compose the answer in the following format:
 | API timeout | Retry once, then inform user of connectivity issue |
 | Too many results | Focus on top 3 by relevance, mention there are more results available |
 | User wants to search team docs | Suggest using `team-search` skill instead |
+
