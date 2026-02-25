@@ -119,22 +119,42 @@ MCP Server（yuque-mcp）通过 `npx -y yuque-mcp` 运行，每次启动时会�
 
 ## ⚙️ 配置 / Configuration
 
-安装后需要设置语雀 Token 环境变量：
-
-```bash
-# 必需 — 语雀个人访问令牌
-export YUQUE_TOKEN="your-yuque-token"
-
-# 可选 — 自定义 API 地址（不设置则使用 yuque-mcp 内置默认值 https://www.yuque.com/api/v2）
-export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"
-```
+安装后需要设置语雀 Token。
 
 ### 获取 Token / Get Your Token
 
 1. 登录 [语雀](https://www.yuque.com)
-2. 进入 **个人设置** → **Token** → **新建**
+2. 进入 **个人设置** → **Token** → **新建**（或直接访问 [Token 设置页](https://www.yuque.com/settings/tokens)）
 3. 勾选需要的权限（建议全选读写权限）
 4. 复制生成的 Token
+
+### 设置 Token / Set Your Token
+
+Plugin 通过 `${YUQUE_TOKEN}` 环境变量读取 Token，需要将其写入 shell 配置文件以永久生效：
+
+**Zsh（macOS 默认）：**
+
+```bash
+echo 'export YUQUE_TOKEN="your-token-here"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+**Bash：**
+
+```bash
+echo 'export YUQUE_TOKEN="your-token-here"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+> 💡 将 `your-token-here` 替换为你在语雀获取的实际 Token。写入配置文件后，新开终端也会自动生效。
+
+### 可选配置 / Optional
+
+```bash
+# 自定义 API 地址（不设置则使用 yuque-mcp 内置默认值 https://www.yuque.com/api/v2）
+echo 'export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"' >> ~/.zshrc
+source ~/.zshrc
+```
 
 ## 🔗 相关项目 / Related Projects
 
