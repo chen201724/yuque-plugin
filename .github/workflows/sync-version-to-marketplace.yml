@@ -1,0 +1,49 @@
+name: Sync Version to Marketplace
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.claude-plugin/plugin.json'
+
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout yuque-plugin
+        uses: actions/checkout@v4
+        with:
+          path: plugin-repo
+
+      - name: Checkout yuque-ecosystem
+        uses: actions/checkout@v4
+        with:
+          repository: yuque/yuque-ecosystem
+          token: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+          path: ecosystem-repo
+
+      - name: Sync version and description
+        run: |
+          # 读取 plugin.json 的 version 和 description
+          VERSION=$(jq -r '.version' plugin-repo/.claude-plugin/plugin.json)
+          DESCRIPTION=$(jq -r '.description' plugin-repo/.claude-plugin/plugin.json)
+
+          # 更新 marketplace.json 中对应 plugin 的 version 和 description
+          jq --arg ver "$VERSION" --arg desc "$DESCRIPTION" \
+            '.version = $ver | .plugins[0].version = $ver | .plugins[0].description = $desc' \
+            ecosystem-repo/.claude-plugin/marketplace.json > tmp.json
+          mv tmp.json ecosystem-repo/.claude-plugin/marketplace.json
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          path: ecosystem-repo
+          token: ${{ secrets.ECOSYSTEM_SYNC_TOKEN }}
+          commit-message: "chore: sync plugin version ${{ env.VERSION }} from yuque-plugin"
+          title: "chore: sync plugin version from yuque-plugin"
+          body: |
+            Automated sync of plugin version and description from [yuque-plugin](https://github.com/yuque/yuque-plugin).
+
+            Updated marketplace.json to match plugin.json version.
+          branch: chore/sync-plugin-version
+          base: main
