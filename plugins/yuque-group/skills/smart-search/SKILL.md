@@ -1,5 +1,5 @@
 ---
-name: group-search
+name: smart-search
 description: Search group Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For group use — searches within team/group repositories. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Team Search — Yuque Team Knowledge Base Search & Q&A
+# Smart Search — Yuque Team Knowledge Base Search & Q&A
 
 Search across group Yuque knowledge bases using natural language, read relevant documents, and synthesize a clear answer with references. Scoped to team/group repositories.
 
@@ -124,7 +124,7 @@ Compose the answer in the following format:
 - Never fabricate information not present in the documents
 - Include document links so the user can read the full source
 - Only return results from group knowledge bases — filter out personal docs
-- This skill searches group knowledge bases — for personal docs, use `personal-search`
+- This skill searches group knowledge bases — for personal docs, use the `smart-search` skill in the `yuque-personal` plugin
 
 ## Error Handling
 
@@ -136,5 +136,4 @@ Compose the answer in the following format:
 | `yuque_get_doc` fails (403) | Tell user they may lack permission; check group Token scope |
 | API timeout | Retry once, then inform user of connectivity issue |
 | Too many results | Focus on top 3 by relevance, mention there are more results available |
-| User wants to search personal docs | Suggest using `personal-search` skill instead |
 | Team Token not configured | Inform user that group search requires a team-level Token |

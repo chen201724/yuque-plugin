@@ -1,5 +1,5 @@
 ---
-name: group-weekly
+name: weekly-report
 description: Generate group weekly reports from Yuque activity data including document stats and member contributions. For group use — aggregates team-wide documentation activity. Requires group Token with statistic:read permission.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server. Yuque API Token must be a group Token with `statistic:read` permission for group stats.
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Team Weekly — Team Documentation Activity Report
+# Weekly Report — Team Documentation Activity Report
 
 Collect group activity data from Yuque (document stats, member contributions) and generate a structured weekly report, then save it to Yuque.
 
@@ -185,7 +185,7 @@ Parameters:
 - If a group has many members, show top 5 in the main table and mention total count
 - Use emoji in headers for visual scanning but keep the tone professional
 - Default report language is Chinese
-- For personal weekly reports, use `personal-weekly` skill instead
+- For personal weekly reports, use the `weekly-report` skill in the `yuque-personal` plugin
 
 ## Error Handling
 
@@ -196,5 +196,4 @@ Parameters:
 | Group has no activity this week | Create a brief report noting zero activity, suggest reasons |
 | User doesn't know group login | Use `yuque_list_repos` with their personal login to find groups |
 | API returns partial data | Generate report with available data, note what's missing |
-| User wants a personal report | Suggest using `personal-weekly` skill instead |
 | Team Token missing statistic:read | Inform user the Token needs `statistic:read` permission |

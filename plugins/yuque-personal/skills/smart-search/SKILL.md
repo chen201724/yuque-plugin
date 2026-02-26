@@ -1,5 +1,5 @@
 ---
-name: personal-search
+name: smart-search
 description: Search your personal Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For personal/individual use — searches across your own documents.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Personal Search — Yuque Personal Knowledge Base Search & Q&A
+# Smart Search — Yuque Personal Knowledge Base Search & Q&A
 
 Search across your personal Yuque knowledge bases using natural language, read relevant documents, and synthesize a clear answer with references.
 
@@ -107,7 +107,7 @@ Compose the answer in the following format:
 - If the answer is only partially found, say what you found and what's missing
 - Never fabricate information not present in the documents
 - Include document links so the user can read the full source
-- This skill searches the user's personal knowledge bases — for team knowledge bases, use `team-search`
+- This skill searches the user's personal knowledge bases — for team knowledge bases, use the `smart-search` skill in the `yuque-group` plugin
 
 ## Error Handling
 
@@ -118,4 +118,3 @@ Compose the answer in the following format:
 | `yuque_get_doc` fails (403) | Tell user they may lack permission to access this doc |
 | API timeout | Retry once, then inform user of connectivity issue |
 | Too many results | Focus on top 3 by relevance, mention there are more results available |
-| User wants to search team docs | Suggest using `team-search` skill instead |

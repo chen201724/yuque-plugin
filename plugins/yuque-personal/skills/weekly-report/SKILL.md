@@ -1,5 +1,5 @@
 ---
-name: personal-weekly
+name: weekly-report
 description: Generate a personal weekly report by scanning your Yuque knowledge bases for documents created or updated this week. For personal/individual use — summarizes your own documentation activity.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Personal Weekly — Personal Documentation Activity Report
+# Weekly Report — Personal Documentation Activity Report
 
 Scan your personal Yuque knowledge bases, find documents created or updated this week, and generate a structured personal weekly report.
 
@@ -167,7 +167,7 @@ Parameters:
 - Keep suggestions constructive and specific
 - Use emoji in headers for visual scanning but keep the tone professional
 - Default report language is Chinese
-- For team weekly reports, use `team-weekly` skill instead
+- For team weekly reports, use the `weekly-report` skill in the `yuque-group` plugin
 
 ## Error Handling
 
@@ -177,4 +177,3 @@ Parameters:
 | `yuque_list_docs` fails for a repo | Skip that repo, note it in the report |
 | No activity this week | Create a brief report noting zero activity, suggest topics to write about |
 | Too many repos to scan | Focus on the most recently active repos (top 10) |
-| User wants a team report | Suggest using `team-weekly` skill instead |
