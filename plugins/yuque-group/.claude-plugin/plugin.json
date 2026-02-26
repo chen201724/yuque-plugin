@@ -7,13 +7,5 @@
   },
   "homepage": "https://yuque.github.io/yuque-ecosystem/",
   "repository": "https://github.com/yuque/yuque-plugin",
-  "license": "MIT",
-  "skills": [
-    "skills/yuque-group-knowledge-report",
-    "skills/yuque-group-meeting-notes",
-    "skills/yuque-group-onboarding-guide",
-    "skills/yuque-group-smart-search",
-    "skills/yuque-group-tech-design",
-    "skills/yuque-group-weekly-report"
-  ]
+  "license": "MIT"
 }
