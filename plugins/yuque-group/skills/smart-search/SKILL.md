@@ -1,5 +1,5 @@
 ---
-name: smart-search
+name: yuque-group-smart-search
 description: Search group Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For group use — searches within team/group repositories. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)

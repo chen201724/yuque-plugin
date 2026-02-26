@@ -1,5 +1,5 @@
 ---
-name: tech-design
+name: yuque-group-tech-design
 description: Generate technical design documents using a standard template and save them to a group Yuque knowledge base. For group use — stores designs in group repos with review workflow. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
