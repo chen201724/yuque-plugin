@@ -1,5 +1,5 @@
 ---
-name: tech-design
+name: yuque-personal-tech-design
 description: Generate technical design documents using a standard template and save them to your personal Yuque knowledge base. For personal/individual use — stores designs in your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

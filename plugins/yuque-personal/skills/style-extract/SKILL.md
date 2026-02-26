@@ -1,5 +1,5 @@
 ---
-name: style-extract
+name: yuque-personal-style-extract
 description: Analyze the writing style of Yuque documents and extract style characteristics including structure, tone, vocabulary, and formatting patterns. For personal/individual use — analyzes your own documents.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

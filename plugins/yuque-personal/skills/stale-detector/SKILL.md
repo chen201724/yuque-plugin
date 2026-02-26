@@ -1,5 +1,5 @@
 ---
-name: stale-detector
+name: yuque-personal-stale-detector
 description: Detect stale and potentially outdated documents in your Yuque knowledge bases by analyzing update timestamps and content freshness signals. For personal/individual use — scans your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

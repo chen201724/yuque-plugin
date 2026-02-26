@@ -1,5 +1,5 @@
 ---
-name: smart-summary
+name: yuque-personal-smart-summary
 description: Generate intelligent summaries for Yuque knowledge bases or multiple documents, providing a quick overview of content landscape and key insights. For personal/individual use — summarizes your own knowledge bases.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

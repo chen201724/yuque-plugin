@@ -1,5 +1,5 @@
 ---
-name: meeting-notes
+name: yuque-personal-meeting-notes
 description: Format meeting content into structured meeting notes and archive them to your personal Yuque knowledge base. For personal/individual use — saves to your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

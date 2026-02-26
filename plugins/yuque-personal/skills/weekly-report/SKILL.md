@@ -1,5 +1,5 @@
 ---
-name: weekly-report
+name: yuque-personal-weekly-report
 description: Generate a personal weekly report by scanning your Yuque knowledge bases for documents created or updated this week. For personal/individual use — summarizes your own documentation activity.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
