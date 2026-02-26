@@ -6,7 +6,7 @@
 
 | Skill | 描述 |
 |-------|------|
-| `smart-search` | 自然语言搜索个人语雀文档，智能摘要回答 |
+| `yuque-personal-smart-search` | 自然语言搜索个人语雀文档，智能摘要回答 |
 
 ## 配置
 

@@ -60,10 +60,10 @@
 
 | Skill | 描述 |
 |-------|------|
-| `smart-search` | 自然语言搜索个人文档，智能摘要回答 |
-| `meeting-notes` | 自动生成结构化会议纪要，保存到个人知识库 |
-| `weekly-report` | 汇总个人一周文档活动，生成周报 |
-| `tech-design` | 根据需求生成技术方案文档 |
+| `yuque-personal-smart-search` | 自然语言搜索个人文档，智能摘要回答 |
+| `yuque-personal-meeting-notes` | 自动生成结构化会议纪要，保存到个人知识库 |
+| `yuque-personal-weekly-report` | 汇总个人一周文档活动，生成周报 |
+| `yuque-personal-tech-design` | 根据需求生成技术方案文档 |
 
 ### 👥 yuque-group — 团队版
 
@@ -71,12 +71,12 @@
 
 | Skill | 描述 |
 |-------|------|
-| `smart-search` | 自然语言搜索团队文档，智能摘要回答 |
-| `meeting-notes` | 自动生成结构化会议纪要，保存到团队知识库 |
-| `weekly-report` | 汇总团队一周文档活动，生成团队周报 |
-| `tech-design` | 根据需求生成技术方案文档，保存到团队知识库 |
-| `onboarding-guide` | 扫描团队知识库，为新成员生成入职阅读指南 |
-| `knowledge-report` | 分析团队知识库健康度，生成知识管理月报 |
+| `yuque-group-smart-search` | 自然语言搜索团队文档，智能摘要回答 |
+| `yuque-group-meeting-notes` | 自动生成结构化会议纪要，保存到团队知识库 |
+| `yuque-group-weekly-report` | 汇总团队一周文档活动，生成团队周报 |
+| `yuque-group-tech-design` | 根据需求生成技术方案文档，保存到团队知识库 |
+| `yuque-group-onboarding-guide` | 扫描团队知识库，为新成员生成入职阅读指南 |
+| `yuque-group-knowledge-report` | 分析团队知识库健康度，生成知识管理月报 |
 
 ## 🔄 知识管理生命周期
 
