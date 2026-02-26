@@ -1,5 +1,5 @@
 ---
-name: weekly-report
+name: yuque-group-weekly-report
 description: Generate group weekly reports from Yuque activity data including document stats and member contributions. For group use — aggregates team-wide documentation activity. Requires group Token with statistic:read permission.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server. Yuque API Token must be a group Token with `statistic:read` permission for group stats.
