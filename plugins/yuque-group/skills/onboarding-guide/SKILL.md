@@ -1,5 +1,5 @@
 ---
-name: onboarding-guide
+name: yuque-group-onboarding-guide
 description: Automatically compile a team's core Yuque documents into a structured onboarding reading guide for new group members. For group use — scans group knowledge bases and generates a prioritized reading plan. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)

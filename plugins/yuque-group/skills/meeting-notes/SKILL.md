@@ -1,5 +1,5 @@
 ---
-name: meeting-notes
+name: yuque-group-meeting-notes
 description: Format meeting content into structured meeting notes and archive them to a group Yuque knowledge base. For group use — saves to team/group repos. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
