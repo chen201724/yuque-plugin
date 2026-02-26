@@ -1,5 +1,5 @@
 ---
-name: smart-search
+name: yuque-personal-smart-search
 description: Search your personal Yuque knowledge bases with natural language queries and provide summarized answers with key points and source links. For personal/individual use — searches across your own documents.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

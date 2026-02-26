@@ -1,5 +1,5 @@
 ---
-name: knowledge-report
+name: yuque-group-knowledge-report
 description: Generate comprehensive monthly knowledge management reports by analyzing team Yuque activity data including group stats, member contributions, knowledge base health, and document trends. For team use — requires team Token with statistic:read permission.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server. Yuque API Token must be a team Token with `statistic:read` permission for group stats.
