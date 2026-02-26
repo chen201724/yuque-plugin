@@ -1,166 +1,107 @@
 # 语雀 Claude Code Plugin / Yuque Claude Code Plugin
 
-一键为 Claude Code 集成语雀知识库 AI 能力。
+语雀 AI 生态 Marketplace — 为 Claude Code 提供语雀知识库集成能力。
 
-One-click Yuque knowledge base integration for Claude Code.
+## 📦 Plugins
 
-## ✨ 包含能力 / What's Included
+本仓库包含两个 Plugin，按使用场景选择安装：
 
-| 类型 | 数量 | 来源 |
-|------|------|------|
-| MCP Tools | 25 | [yuque-mcp](https://github.com/yuque/yuque-mcp-server) |
-| Skills | 10 | [yuque-skills](https://github.com/yuque/yuque-skills) |
+| Plugin | 描述 | Skills | 环境变量 |
+|--------|------|--------|----------|
+| `yuque-personal` | 个人版 — 个人知识库 AI 集成 | 4 个 | `YUQUE_PERSONAL_TOKEN` |
+| `yuque-group` | 团队版 — 团队知识库 AI 集成 | 6 个 | `YUQUE_GROUP_TOKEN` |
 
-### 25 MCP Tools
+两个 Plugin 都包含 25 个 MCP Tools（由 [yuque-mcp](https://github.com/yuque/yuque-mcp-server) 提供）。
 
-通过 [yuque-mcp](https://github.com/yuque/yuque-mcp-server) 提供，覆盖语雀 API 全部核心功能：
+### 👤 yuque-personal — 个人版
 
-- 文档 CRUD（创建、读取、更新、删除）
-- 知识库管理
-- 搜索（全文搜索、知识库内搜索）
-- 团队与协作（成员、权限）
-- 统计与分析
-- 更多...
-
-### 10 Skills
-
-Skills 来自 [yuque-skills](https://github.com/yuque/yuque-skills) 仓库，直接内置在本插件中。
-
-#### 👤 个人 Skills（4）
+适合个人用户，操作个人知识库：
 
 | Skill | 描述 |
 |-------|------|
-| `smart-search` | 自然语言搜索语雀文档，智能摘要回答 |
-| `meeting-notes` | 从会议内容自动生成结构化会议纪要 |
-| `weekly-report` | 汇总一周工作，生成周报并发布到语雀 |
+| `smart-search` | 自然语言搜索个人文档，智能摘要回答 |
+| `meeting-notes` | 自动生成结构化会议纪要，保存到个人知识库 |
+| `weekly-report` | 汇总个人一周文档活动，生成周报 |
 | `tech-design` | 根据需求生成技术方案文档 |
 
-#### 👥 团队 Skills（6）
+### 👥 yuque-group — 团队版
+
+适合团队使用，操作团队知识库（包含个人版全部能力 + 团队专属能力）：
 
 | Skill | 描述 |
 |-------|------|
-| `onboarding-guide` | 为新成员生成入职指南 |
-| `knowledge-report` | 分析团队知识库健康度，生成月报 |
-| `team-wiki-init` | 一键初始化团队知识库结构 |
-| `doc-review` | 文档质量审查与改进建议 |
-| `permission-audit` | 知识库权限审计与安全报告 |
-| `content-migration` | 从其他平台迁移内容到语雀 |
+| `smart-search` | 自然语言搜索团队文档，智能摘要回答 |
+| `meeting-notes` | 自动生成结构化会议纪要，保存到团队知识库 |
+| `weekly-report` | 汇总团队一周文档活动，生成团队周报 |
+| `tech-design` | 根据需求生成技术方案文档，保存到团队知识库 |
+| `onboarding-guide` | 扫描团队知识库，为新成员生成入职阅读指南 |
+| `knowledge-report` | 分析团队知识库健康度，生成知识管理月报 |
 
-## 📦 安装 / Installation
+## 🚀 安装 / Installation
 
-### 方式一：终端安装（推荐）
+### 1. 添加 Marketplace
 
 ```bash
-# 1. 添加语雀 Marketplace
+# 终端
 claude plugin marketplace add yuque/yuque-plugin
 
-# 2. 安装 Plugin
-claude plugin install yuque@yuque
-```
-
-### 方式二：在 Claude Code 内部安装
-
-```
-# 1. 添加语雀 Marketplace
-/plugin marketplace add yuque/yuque-plugin
-
-# 2. 安装 Plugin
-/plugin install yuque@yuque
-```
-
-### 方式三：通过 GitHub 仓库直接安装
-
-1. Clone 仓库到本地：
-
-```bash
-git clone git@github.com:yuque/yuque-plugin.git /path/to/yuque-plugin
-```
-
-2. 从本地目录安装：
-
-```bash
-claude plugin install --dir /path/to/yuque-plugin
-```
-
-## 🔄 更新 / Upgrade
-
-### 更新 Plugin（Skills）
-
-当我们发布新版本的 Skills 时，你可以通过以下方式更新：
-
-```bash
-# 在终端中更新
-claude plugin update yuque@yuque
-
 # 或在 Claude Code 内部
-/plugin update yuque@yuque
+/plugin marketplace add yuque/yuque-plugin
 ```
 
-### 更新 MCP Server
+### 2. 安装 Plugin
 
-MCP Server（yuque-mcp）通过 `npx -y yuque-mcp` 运行，每次启动时会自动检查并使用最新版本，无需手动更新。
+```bash
+# 安装个人版
+claude plugin install yuque-personal@yuque
 
-如果需要指定版本：
-```json
-{
-  "mcpServers": {
-    "yuque": {
-      "command": "npx",
-      "args": ["-y", "yuque-mcp@1.0.0"]
-    }
-  }
-}
+# 或安装团队版
+claude plugin install yuque-group@yuque
+
+# 也可以两个都装（使用不同的 Token）
 ```
-
-### 查看版本
-
-- Plugin 版本：查看 `/plugin` 界面的 Installed tab
-- MCP Server 版本：`npx yuque-mcp --version`
 
 ## ⚙️ 配置 / Configuration
 
-安装后需要设置语雀 Token。
-
-### 获取 Token / Get Your Token
+### 获取 Token
 
 1. 登录 [语雀](https://www.yuque.com)
 2. 进入 **个人设置** → **Token** → **新建**（或直接访问 [Token 设置页](https://www.yuque.com/settings/tokens)）
 3. 勾选需要的权限（建议全选读写权限）
 4. 复制生成的 Token
 
-### 设置 Token / Set Your Token
+### 设置环境变量
 
-Plugin 通过 `${YUQUE_TOKEN}` 环境变量读取 Token，需要将其写入 shell 配置文件以永久生效：
-
-**Zsh（macOS 默认）：**
+根据安装的 Plugin 设置对应的环境变量：
 
 ```bash
-echo 'export YUQUE_TOKEN="your-token-here"' >> ~/.zshrc
+# 个人版
+echo 'export YUQUE_PERSONAL_TOKEN="your-personal-token"' >> ~/.zshrc
+
+# 团队版
+echo 'export YUQUE_GROUP_TOKEN="your-group-token"' >> ~/.zshrc
+
 source ~/.zshrc
 ```
 
-**Bash：**
+> 💡 个人 Token 和团队 Token 可以是同一个，也可以是不同的。团队 Token 需要有团队级别的访问权限。
+
+## 🔄 更新 / Upgrade
 
 ```bash
-echo 'export YUQUE_TOKEN="your-token-here"' >> ~/.bashrc
-source ~/.bashrc
+# 更新个人版
+claude plugin update yuque-personal@yuque
+
+# 更新团队版
+claude plugin update yuque-group@yuque
 ```
 
-> 💡 将 `your-token-here` 替换为你在语雀获取的实际 Token。写入配置文件后，新开终端也会自动生效。
-
-### 可选配置 / Optional
-
-```bash
-# 自定义 API 地址（不设置则使用 yuque-mcp 内置默认值 https://www.yuque.com/api/v2）
-echo 'export YUQUE_API_URL="https://your-yuque-instance.com/api/v2"' >> ~/.zshrc
-source ~/.zshrc
-```
+MCP Server（yuque-mcp）通过 `npx -y yuque-mcp@latest` 运行，每次启动自动使用最新版本。
 
 ## 🔗 相关项目 / Related Projects
 
 - [yuque-mcp-server](https://github.com/yuque/yuque-mcp-server) — 语雀 MCP Server（25 Tools）
-- [yuque-skills](https://github.com/yuque/yuque-skills) — 语雀 Skills（10 Skills）
-- [yuque-ecosystem](https://github.com/yuque/yuque-ecosystem) — 语雀 AI 生态主页 & Plugin Marketplace
+- [yuque-ecosystem](https://github.com/yuque/yuque-ecosystem) — 语雀 AI 生态主页
 
 ## 📄 License
 

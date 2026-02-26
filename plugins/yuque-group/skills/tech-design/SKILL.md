@@ -1,5 +1,5 @@
 ---
-name: group-tech-design
+name: tech-design
 description: Generate technical design documents using a standard template and save them to a group Yuque knowledge base. For group use — stores designs in group repos with review workflow. Requires group Token.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with group Token (group-level access)
@@ -8,7 +8,7 @@ metadata:
   version: "2.0"
 ---
 
-# Team Tech Design — Technical Design Document Generator (Team)
+# Tech Design — Technical Design Document Generator (Team)
 
 Help the user write a structured technical design document following a standard template, then save it to the team's Yuque knowledge base for group review.
 
@@ -140,7 +140,7 @@ Parameters:
 - If the user's requirements are vague, make reasonable assumptions and note them clearly with "【假设】" markers
 - Don't over-engineer — match the design complexity to the project scope
 - Always end the confirmation with "请团队评审后发布" — group designs need review
-- This skill saves to group repos — for personal repos, use `personal-tech-design`
+- This skill saves to group repos — for personal repos, use the `tech-design` skill in the `yuque-personal` plugin
 
 ## Error Handling
 
@@ -150,6 +150,5 @@ Parameters:
 | `yuque_search` finds conflicting existing designs | Mention them and ask user how to reconcile |
 | `yuque_create_doc` fails | Show error, offer to output the markdown for manual copy |
 | User wants to update an existing design doc | Use `yuque_search` to find it, then suggest creating a v2 or appendix |
-| User wants to save to personal repo | Suggest using `personal-tech-design` skill instead |
 | Group login not provided | Ask user for the team's group login |
 | Team Token not configured | Inform user that group repos require a team-level Token |
