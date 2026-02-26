@@ -1,6 +1,6 @@
 {
   "name": "yuque-personal",
-  "description": "语雀个人版 — 个人知识库 AI 集成，25 MCP Tools + 5 Skills",
+  "description": "语雀个人版 — 个人知识库 AI 集成，25 MCP Tools + 8 Skills",
   "version": "1.0.0",
   "author": {
     "name": "yuque"
@@ -9,9 +9,13 @@
   "repository": "https://github.com/yuque/yuque-plugin",
   "license": "MIT",
   "skills": [
-    "skills/smart-search",
-    "skills/style-extract",
+    "skills/daily-capture",
+    "skills/knowledge-connect",
+    "skills/note-refine",
+    "skills/reading-digest",
     "skills/smart-summary",
-    "skills/stale-detector"
+    "skills/stale-detector",
+    "skills/style-extract",
+    "skills/yuque-personal-smart-search"
   ]
 }

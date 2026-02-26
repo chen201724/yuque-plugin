@@ -7,18 +7,15 @@
     "name": "yuque",
     "email": "willchen.babydog@gmail.com"
   },
-  "metadata": {
-    "pluginRoot": "./plugins"
-  },
   "plugins": [
     {
       "name": "yuque-personal",
-      "description": "语雀个人版 — 个人知识库 AI 集成，25 MCP Tools + 4 Skills",
+      "description": "语雀个人版 — 个人知识库 AI 集成，25 MCP Tools + 8 Skills",
       "version": "1.0.0",
       "author": {
         "name": "yuque"
       },
-      "source": "yuque-personal",
+      "source": "./plugins/yuque-personal",
       "category": "productivity"
     },
     {
@@ -28,7 +25,7 @@
       "author": {
         "name": "yuque"
       },
-      "source": "yuque-group",
+      "source": "./plugins/yuque-group",
       "category": "productivity"
     }
   ]
