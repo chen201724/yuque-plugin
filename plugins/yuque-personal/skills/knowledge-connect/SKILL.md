@@ -1,5 +1,5 @@
 ---
-name: knowledge-connect
+name: yuque-personal-knowledge-connect
 description: Discover connections between documents, build knowledge networks, and establish bidirectional links across your personal Yuque knowledge base. For personal/individual use — operates on your own docs.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

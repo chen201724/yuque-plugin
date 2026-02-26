@@ -1,5 +1,5 @@
 ---
-name: note-refine
+name: yuque-personal-note-refine
 description: Refine and restructure existing notes into well-organized, deduplicated, and enriched documents in your personal Yuque knowledge base. For personal/individual use — reads and writes your own docs.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

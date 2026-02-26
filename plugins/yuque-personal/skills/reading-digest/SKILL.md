@@ -1,5 +1,5 @@
 ---
-name: reading-digest
+name: yuque-personal-reading-digest
 description: Quickly distill Yuque documents into structured reading digests with key takeaways, summaries, and reading notes. For personal/individual use — reads from your own knowledge bases.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token

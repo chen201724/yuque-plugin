@@ -1,5 +1,5 @@
 ---
-name: daily-capture
+name: yuque-personal-daily-capture
 description: Quickly capture ideas, thoughts, and fleeting notes to your personal Yuque knowledge base. For personal/individual use — saves to your own repos.
 license: Apache-2.0
 compatibility: Requires yuque-mcp server connected to a Yuque account with personal Token
